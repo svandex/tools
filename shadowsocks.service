@@ -1,0 +1,11 @@
+[Unit]
+Description=shadowsocks for pass great china firewall
+After=ssh.service
+
+[Service]
+ExecStart=/usr/bin/ssserver -c /etc/shadowsocks/config.json
+Restart=always
+RestartSec=2
+
+[Install]
+WantedBy=multi-user.target
